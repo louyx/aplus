@@ -32,7 +32,7 @@
 (if aplus-set-load-path
     (setq load-path 
 	  (append 
-	   '("/usr/local/aplus-fsf-4.20/lisp.1") load-path 
+	   '("/usr/local/aplus/lisp.1") load-path 
 	   )	
 	  ))
 ;;
@@ -47,7 +47,7 @@
 (require 'a-font)
 (require 'keyb)
 (require 'a)
-(setq a-prog "/usr/local/bin/a+")
+(setq a-prog "/usr/local/aplus/bin/a+")
 (setq a-plus t)
 
 (cond ((file-readable-p "~/.custom/a-options.el")

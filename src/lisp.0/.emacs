@@ -1,2 +1,2 @@
-(load "/usr/local/aplus-fsf-4.20/lisp/aplus")
+(load "/usr/local/aplus/lisp.1/aplus")
 

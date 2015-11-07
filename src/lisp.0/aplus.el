@@ -5,14 +5,14 @@
 ;;
 (setq load-path 
       (append 
-       '("/usr/local/aplus-fsf-4.20/lisp.0") load-path 
+       '("/usr/local/aplus/lisp.0") load-path 
        )	
       )
 ;;
 ;; Load Aplus and set defaults
 ;;
 (load "xa" nil t)
-(setq a-prog "/usr/local/bin/a+")
+(setq a-prog "/usr/local/aplus/bin/a+")
 (setq a-plus t)
 ;;(setq a-plus-without-s t)
 ;;(setq a-plus-rest '("u" "arg0" "arg1"))
