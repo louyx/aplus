@@ -27,7 +27,7 @@ void MSUtil::comma(const char *fromBuffer_,char *toBuffer_,int size_)
   int places,len,i,j;
   char *cp;
   
-  if ((cp=strchr(fromBuffer_,'.'))!=NULL)
+  if ((cp=strchr((char *)fromBuffer_,'.'))!=NULL)
    {
      places=cp-fromBuffer_;
      for (i=0,j=0,len=strlen(fromBuffer_); j<=len&&i<(size_-1); j++,i++)

@@ -94,7 +94,7 @@ template <class Element>
 void MSObservableTree<Element>::removeSubtree(const MSTabularTreeCursor<Element>& cursor_)
 {
   MSTabularTreeCursor<Element> cursor2(cursor_);
-  unsigned long pos=position(cursor2);
+  unsigned long pos=this->position(cursor2);
   cursor2.setToParent();
   MSTabularTree<Element>::removeSubtree(cursor_);
   if (cursor2.isValid()) changed(cursor2,pos,MSObservableTreeDelete);
@@ -162,7 +162,7 @@ template <class Element>
 void MSObservableTree<Element>::replaceAt(MSTabularTreeCursor<Element> const& cursor_,Element const& element_)
 {
   MSTabularTree<Element>::replaceAt(cursor_,element_);
-  changed(cursor_,position(cursor_),MSObservableTreeAssign);
+  changed(cursor_,this->position(cursor_),MSObservableTreeAssign);
 }
 
 template <class Element>
@@ -170,10 +170,10 @@ void MSObservableTree<Element>::replaceAt(MSTabularTreeCursor<Element> const& cu
 {
   if (&tree_!=this)
    {
-     if (isRoot(cursor_)) copy(tree_);
+     if (this->isRoot(cursor_)) copy(tree_);
      else
       {
-	unsigned long pos=position(cursor_);
+	unsigned long pos=this->position(cursor_);
 	MSTabularTreeCursor<Element> cursor=cursor_;
 	cursor.setToParent();
 	MSTabularTree<Element>::removeSubtree(cursor_);
@@ -199,7 +199,7 @@ void MSObservableTree<Element>::permuteChildren(MSTabularTreeCursor<Element> con
 template <class Element>
 void MSObservableTree<Element>::elementChanged(MSTabularTreeCursor<Element> const& cursor_)
 {
-  changed(cursor_,position(cursor_),MSObservableTreeAssign);
+  changed(cursor_,this->position(cursor_),MSObservableTreeAssign);
 }
 
 template <class Element>

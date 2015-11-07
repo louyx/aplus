@@ -87,7 +87,7 @@ INLINELINKAGE MSObjectVector<Type> MSObjectVector<Type>::operator[] (const MSInd
 template <class Type>
 INLINELINKAGE MSObjectVector<Type> MSObjectVector<Type>::operator[] (const MSBinaryVector & bVect_) const
 {
-  return compress (*this, bVect_);
+  return this->compress (*this, bVect_);
 }
 
 

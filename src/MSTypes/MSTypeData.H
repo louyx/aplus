@@ -35,6 +35,9 @@
 #include <stddef.h>
 #endif
 
+// needed for size_t
+#include <stddef.h>
+
 class MSString;
 
 //

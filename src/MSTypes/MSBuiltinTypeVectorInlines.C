@@ -77,7 +77,7 @@ INLINELINKAGE MSBuiltinVector<Type> MSBuiltinVector<Type>::operator[] (const MSI
 template <class Type>
 INLINELINKAGE MSBuiltinVector<Type> MSBuiltinVector<Type>::operator[] (const MSBinaryVector & bVect_) const
 {
-  return compress (*this, bVect_);
+  return this->compress (*this, bVect_);
 }
 
 
