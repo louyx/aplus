@@ -1,0 +1,4 @@
+if( ()½scriptsDirûsys.readenv{"SCRIPTS_DIR"} ) {
+  scriptsDirû"/usr/local/aplus-fsf-4.22/scripts";
+}
+
